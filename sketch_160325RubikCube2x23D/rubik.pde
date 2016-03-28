@@ -83,26 +83,43 @@ void rubikLoop() {
   }
 }
 
-void fillByNumber(int number) {
-  //  println(number);
-  switch(number) {
+boolean[][] rotateCube(int [] sequence, boolean[][] tempSurfaces) { //smarter way
+  boolean [][] returnSurfaces = new boolean[5][24];
+  for (int j = 0; j < 5; j++) {
+    for (int i = 0; i < 24; i++) {
+      returnSurfaces[j][i] = tempSurfaces[j][sequence[i]];
+    }
+  }
+  return returnSurfaces;
+}
+
+boolean[][] executeRotateByNumber(int commandNumber, boolean[][] tempSurfaces) {
+  switch(commandNumber) {
   case 0: 
-    fill(255, 0, 0); 
-    break;
+    return rotateCube(r1P, tempSurfaces); 
   case 1: 
-    fill(0, 255, 0); 
-    break;
+    return rotateCube(r1N, tempSurfaces); 
   case 2: 
-    fill(0, 0, 255); 
-    break;
+    return rotateCube(r1T, tempSurfaces); 
   case 3: 
-    fill(255, 255, 0); 
-    break;
+    return rotateCube(r2P, tempSurfaces); 
   case 4: 
-    fill(255, 0, 255); 
-    break;
+    return rotateCube(r2N, tempSurfaces); 
   case 5: 
-    fill(0, 255, 255); 
-    break;
+    return rotateCube(r2T, tempSurfaces); 
+  case 6: 
+    return rotateCube(r3P, tempSurfaces); 
+  case 7: 
+    return rotateCube(r3N, tempSurfaces); 
+  case 8: 
+    return rotateCube(r3T, tempSurfaces); 
+  case 9: 
+    return rotateCube(r4P, tempSurfaces); 
+  case 10: 
+    return rotateCube(r4N, tempSurfaces); 
+  case 11: 
+    return rotateCube(r4T, tempSurfaces);
+  default:
+    return new boolean[5][24];
   }
 }

@@ -39,6 +39,82 @@ void p5Setup() {
         .setCaptionLabel("DEMO")
           .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
               ;
+
+  cp5.addButton("button_rotate1P")
+    .setPosition(0, height - 3 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("1P")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate1N")
+    .setPosition(0, height - 2 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("1N")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate1T")
+    .setPosition(0, height - 1 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("1T")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+              
+  cp5.addButton("button_rotate2P")
+    .setPosition(height/10, height - 3 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("2P")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate2N")
+    .setPosition(height/10, height - 2 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("2N")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate2T")
+    .setPosition(height/10, height - 1 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("2T")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+              
+  cp5.addButton("button_rotate3P")
+    .setPosition(2 * height/10, height - 3 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("3P")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate3N")
+    .setPosition(2 * height/10, height - 2 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("3N")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate3T")
+    .setPosition(2 * height/10, height - 1 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("3T")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+              
+  cp5.addButton("button_rotate4P")
+    .setPosition(3 * height/10, height - 3 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("4P")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate4N")
+    .setPosition(3 * height/10, height - 2 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("4N")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
+  cp5.addButton("button_rotate4T")
+    .setPosition(3 * height/10, height - 1 * height/10)
+      .setSize(height/10, height/10)
+        .setCaptionLabel("4T")
+          .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
+              ;
 }
 
 public void button_judge() {
@@ -76,6 +152,46 @@ public void button_demo() {
     for (int temp : solveSequence) print(temp + " ");
     println("");
   }
+}
+
+public void button_rotate1P() {
+  surfaces = executeRotateByNumber(0, surfaces);
+}
+public void button_rotate1N() {
+  surfaces = executeRotateByNumber(1, surfaces);
+}
+public void button_rotate1T() {
+  surfaces = executeRotateByNumber(2, surfaces);
+}
+
+public void button_rotate2P() {
+  surfaces = executeRotateByNumber(3, surfaces);
+}
+public void button_rotate2N() {
+  surfaces = executeRotateByNumber(4, surfaces);
+}
+public void button_rotate2T() {
+  surfaces = executeRotateByNumber(5, surfaces);
+}
+
+public void button_rotate3P() {
+  surfaces = executeRotateByNumber(6, surfaces);
+}
+public void button_rotate3N() {
+  surfaces = executeRotateByNumber(7, surfaces);
+}
+public void button_rotate3T() {
+  surfaces = executeRotateByNumber(8, surfaces);
+}
+
+public void button_rotate4P() {
+  surfaces = executeRotateByNumber(9, surfaces);
+}
+public void button_rotate4N() {
+  surfaces = executeRotateByNumber(10, surfaces);
+}
+public void button_rotate4T() {
+  surfaces = executeRotateByNumber(11, surfaces);
 }
 
 void keyPressed() {

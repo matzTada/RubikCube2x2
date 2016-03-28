@@ -30,8 +30,9 @@ void drawRubikSheet(int x, int y, int w, int h) { // 2D draw. Development view o
   myRect(3.0 / 8.0 * (float)w, 5.0 / 6.0 *  (float)h, w, h, 23);
 }
 
-void myRect(float x, float y, int w, int h, int cellNumber) { //draw rect by cellNumber
-  switch(surfaceColor[cellNumber]) {
+void fillByNumber(int number) {
+  //  println(number);
+  switch(number) {
   case 0: 
     fill(255, 0, 0); 
     break;
@@ -54,6 +55,10 @@ void myRect(float x, float y, int w, int h, int cellNumber) { //draw rect by cel
     fill(0, 0, 0);
     break;
   }
+}
+
+void myRect(float x, float y, int w, int h, int cellNumber) { //draw rect by cellNumber
+  fillByNumber(surfaceColor[cellNumber]);
   rect(x, y, 1.0 / 8.0 * (float)w, 1.0 / 6.0 *  (float)h);
 };
 
