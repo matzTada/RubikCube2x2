@@ -1,33 +1,56 @@
+void myRect(float x, float y, int w, int h, int number, String str) { //draw rect by cellNumber
+  fillByNumber(number);
+  strokeWeight(height/200);
+  rect(x, y, 1.0 / 8.0 * (float)w, 1.0 / 6.0 *  (float)h);
+  fill(255, 150);
+  textAlign(CENTER, CENTER);
+  textSize(height/20);
+  text(str, x + 1.0 / 8.0 * (float)w / 2, y + 1.0 / 6.0 *  (float)h / 2);
+}
+
 void drawRubikSheet(int x, int y, int w, int h) { // 2D draw. Development view of cube
-  myRect(0.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 0);
-  myRect(1.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 1);
-  myRect(0.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 2);
-  myRect(1.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 3);
+  //Left
+  myRect(0.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[0], "L");
+  myRect(1.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[1], "L");
+  myRect(0.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[2], "L");
+  myRect(1.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[3], "L");
 
-  myRect(2.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 4);
-  myRect(3.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 5);
-  myRect(2.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 6);
-  myRect(3.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 7);
+  //Front
+  myRect(2.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[4], "F");
+  myRect(3.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[5], "F");
+  myRect(2.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[6], "F");
+  myRect(3.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[7], "F");
 
-  myRect(4.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 8);
-  myRect(5.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 9);
-  myRect(4.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 10);
-  myRect(5.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 11);
+  //Right
+  myRect(4.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[8], "R");
+  myRect(5.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[9], "R");
+  myRect(4.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[10], "R");
+  myRect(5.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[11], "R");
 
-  myRect(6.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 12);
-  myRect(7.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 13);
-  myRect(6.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 14);
-  myRect(7.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 15);
+  //Back
+  myRect(6.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[12], "B");
+  myRect(7.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, surfaceColor[13], "B");
+  myRect(6.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[14], "B");
+  myRect(7.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, surfaceColor[15], "B");
 
-  myRect(2.0 / 8.0 * (float)w, 0.0 / 6.0 *  (float)h, w, h, 16);
-  myRect(3.0 / 8.0 * (float)w, 0.0 / 6.0 *  (float)h, w, h, 17);
-  myRect(2.0 / 8.0 * (float)w, 1.0 / 6.0 *  (float)h, w, h, 18);
-  myRect(3.0 / 8.0 * (float)w, 1.0 / 6.0 *  (float)h, w, h, 19);
+  //Top
+  myRect(2.0 / 8.0 * (float)w, 0.0 / 6.0 *  (float)h, w, h, surfaceColor[16], "T");
+  myRect(3.0 / 8.0 * (float)w, 0.0 / 6.0 *  (float)h, w, h, surfaceColor[17], "T");
+  myRect(2.0 / 8.0 * (float)w, 1.0 / 6.0 *  (float)h, w, h, surfaceColor[18], "T");
+  myRect(3.0 / 8.0 * (float)w, 1.0 / 6.0 *  (float)h, w, h, surfaceColor[19], "T");
 
-  myRect(2.0 / 8.0 * (float)w, 4.0 / 6.0 *  (float)h, w, h, 20);
-  myRect(3.0 / 8.0 * (float)w, 4.0 / 6.0 *  (float)h, w, h, 21);
-  myRect(2.0 / 8.0 * (float)w, 5.0 / 6.0 *  (float)h, w, h, 22);
-  myRect(3.0 / 8.0 * (float)w, 5.0 / 6.0 *  (float)h, w, h, 23);
+  //Bottom
+  myRect(2.0 / 8.0 * (float)w, 4.0 / 6.0 *  (float)h, w, h, surfaceColor[20], "B");
+  myRect(3.0 / 8.0 * (float)w, 4.0 / 6.0 *  (float)h, w, h, surfaceColor[21], "B");
+  myRect(2.0 / 8.0 * (float)w, 5.0 / 6.0 *  (float)h, w, h, surfaceColor[22], "B");
+  myRect(3.0 / 8.0 * (float)w, 5.0 / 6.0 *  (float)h, w, h, surfaceColor[23], "B");
+
+  //text
+  noStroke();
+  myRect(8.0 / 8.0 * (float)w, 2.0 / 6.0 *  (float)h, w, h, 7, "1");
+  myRect(8.0 / 8.0 * (float)w, 3.0 / 6.0 *  (float)h, w, h, 7, "2");
+  myRect(2.0 / 8.0 * (float)w, 6.0 / 6.0 *  (float)h, w, h, 7, "3");
+  myRect(3.0 / 8.0 * (float)w, 6.0 / 6.0 *  (float)h, w, h, 7, "4");
 }
 
 void fillByNumber(int number) {
@@ -56,11 +79,6 @@ void fillByNumber(int number) {
     break;
   }
 }
-
-void myRect(float x, float y, int w, int h, int cellNumber) { //draw rect by cellNumber
-  fillByNumber(surfaceColor[cellNumber]);
-  rect(x, y, 1.0 / 8.0 * (float)w, 1.0 / 6.0 *  (float)h);
-};
 
 void drawRubikCube() { //draw rubik cube
   stroke(255);

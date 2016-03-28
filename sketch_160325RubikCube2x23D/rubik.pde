@@ -43,6 +43,7 @@ boolean surfaces[][] = {
 };
 
 boolean demoFlag = false;
+boolean pastJudge = false;
 ArrayList<Integer> solveSequence = new ArrayList<Integer>();
 int demoNow = 0;
 

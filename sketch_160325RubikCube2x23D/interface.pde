@@ -58,7 +58,7 @@ void p5Setup() {
         .setCaptionLabel("1T")
           .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
               ;
-              
+
   cp5.addButton("button_rotate2P")
     .setPosition(height/10, height - 3 * height/10)
       .setSize(height/10, height/10)
@@ -77,7 +77,7 @@ void p5Setup() {
         .setCaptionLabel("2T")
           .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
               ;
-              
+
   cp5.addButton("button_rotate3P")
     .setPosition(2 * height/10, height - 3 * height/10)
       .setSize(height/10, height/10)
@@ -96,7 +96,7 @@ void p5Setup() {
         .setCaptionLabel("3T")
           .getCaptionLabel().setFont(font).toUpperCase(false) //this line is important for set text size
               ;
-              
+
   cp5.addButton("button_rotate4P")
     .setPosition(3 * height/10, height - 3 * height/10)
       .setSize(height/10, height/10)
@@ -118,7 +118,8 @@ void p5Setup() {
 }
 
 public void button_judge() {
-  println("judge return = " + judge(surfaces));
+  pastJudge = judge(surfaces);
+  println("judge return = " + pastJudge);
 }
 
 public void button_random() {
@@ -128,7 +129,17 @@ public void button_random() {
 
 public void button_solve() {
   println("solve");
-  solve(7, surfaces);
+  int [] tempSequence = solve(7, surfaces);
+  println(tempSequence);
+  if (tempSequence == null) {
+    println("cannnot solve!! tempSequence is null!! null null");
+  } else {
+    solveSequence.clear();
+    for (int temp : tempSequence) solveSequence.add(temp);
+    print("solveSequence: ");
+    for (int temp : solveSequence) print(temp + " ");
+    println("");
+  }
 }
 
 public void button_reset() {   
@@ -251,7 +262,13 @@ void keyPressed() {
 }
 
 void mouseDragged() {
-  pastMouseX = mouseX;
-  pastMouseY = mouseY;
+  if (
+  (0 < mouseX && mouseX < 4 * height/10 && height - 3 * height/10 < mouseY && mouseY < height) 
+    || (width - height/5 < mouseX && mouseX < width)
+    ) {
+  } else {
+    pastMouseX = mouseX;
+    pastMouseY = mouseY;
+  }
 }
 

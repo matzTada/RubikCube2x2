@@ -4,7 +4,7 @@ int pastMouseX, pastMouseY;
 
 void setup() {
   size(800, 600, P3D);    
-  c = height / 5;
+  c = height / 6;
 
   frameRate(15);
 
@@ -20,6 +20,19 @@ void draw() {
   background(0);
 
   rubikLoop();
+
+  //text
+  fill(255);
+  stroke(255);
+  textSize(height/15);
+  textAlign(RIGHT);
+  String titleStr = "TadaMatz RubikCube2x2";
+  text(titleStr, width - height/5, height / 15);
+  
+  textAlign(RIGHT, BOTTOM);
+  String resultStr = "pastJudge: " + pastJudge + "\nsolveSequence: ";
+  for(int tempInt : solveSequence) resultStr += tempInt + ",";
+  text(resultStr, width - height/5, height);
 
   //2D development view
   pushMatrix();

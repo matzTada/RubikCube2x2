@@ -35,7 +35,7 @@ int [] r4T = {
   0, 1, 2, 3, 4, 14, 6, 12, 11, 10, 9, 8, 7, 13, 5, 15, 16, 21, 18, 23, 20, 17, 22, 19
 };
 
-boolean judge(boolean tempSurfaces[][]) {
+boolean judge(boolean tempSurfaces[][]) {//judge function
   boolean tempANDLAYER = true;  
   for (int j = 0; j < 5; j++) {
     boolean tempAND = true;
