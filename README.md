@@ -1,4 +1,4 @@
-#Rubik's Cube 2x2 Simulator and Solver
+# Rubik's Cube 2x2 Simulator and Solver
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=JhxI5xQf2u0
 " target="_blank"><img src="http://img.youtube.com/vi/JhxI5xQf2u0/0.jpg" 
